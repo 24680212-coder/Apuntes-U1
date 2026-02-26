@@ -61,7 +61,112 @@ La rasterización es el proceso de convertir figuras matemáticas en píxeles:
     * **SVG:** El formato vectorial estándar para la web.
 
 ---
+### 🛠️ Práctica: Dibujo de la Flor de la Vida 
 
+En esta práctica se aplica el uso de ciclos `while` y funciones trigonométricas para generar un patrón geométrico complejo. El algoritmo se basa en la repetición de círculos cuyos centros se desplazan sobre el perímetro de un círculo central.
+
+#### Explicación de las Funciones Utilizadas:
+Para posicionar los círculos, el script utiliza las siguientes funciones del módulo `math`:
+* **math.cos(angulo):** Calcula la posición en el eje X.
+* **math.sin(angulo):** Calcula la posición en el eje Y.
+* **math.radians(grados):** Convierte grados (0-360) a radianes, ya que Python usa radianes para los cálculos.
+  
+#### Código Fuente (Blender Python):
+
+```python
+import bpy
+import math
+
+# 1. Limpieza de la escena previa
+bpy.ops.object.select_all(action="SELECT")
+bpy.ops.object.delete()
+
+# 2. Parámetros de la figura
+radio = 3
+segmentos = 64
+paso_angular = 60  # Incremento para obtener 6 círculos exactos
+angulo_actual = 0
+contador = 0
+
+# 3. Creación del círculo central
+bpy.ops.mesh.primitive_circle_add(radius=radio, location=(0, 0, 0), vertices=segmentos)
+
+# 4. Ciclo para la generación de la estructura periférica
+while contador < 6:
+    # Cálculo trigonométrico de la posición del nuevo centro
+    x = radio * math.cos(math.radians(angulo_actual))
+    y = radio * math.sin(math.radians(angulo_actual))
+    
+    # Generación del círculo en la posición calculada
+    bpy.ops.mesh.primitive_circle_add(radius=radio, location=(x, y, 0), vertices=segmentos)
+    
+    # Actualización para la siguiente iteración
+    angulo_actual += paso_angular  # Desplazamiento de 60 grados
+    contador += 1                  # Incremento del control de ciclo
+```
+A continuación se muestra el código en ejecución:
+
+<img width="1920" height="1008" alt="Captura de pantalla 2026-02-25 201813" src="https://github.com/user-attachments/assets/4bd87784-a8f7-477d-a3a8-443bdd739447" />
+
+### 🛠️ Práctica: Dibujo de un Polígono Regular (Construcción de Mallas)
+
+En esta práctica se profundiza en la creación de geometría personalizada. A diferencia de la práctica anterior, aquí no usamos una función de "crear círculo", sino que definimos manualmente los **vértices** (puntos en el espacio) y las **aristas** (líneas que conectan los puntos).
+
+#### Conceptos Clave de la API de Blender:
+1.  **bpy.data.meshes.new:** Crea la estructura de datos que contendrá la geometría.
+2.  **bpy.data.objects.new:** Crea el contenedor (objeto) que permite que la malla exista en la escena 3D.
+3.  **malla.from_pydata:** Es la función fundamental que recibe tres listas: Vértices, Aristas y Caras.
+    * `Vértices`: Lista de coordenadas (x, y, z).
+    * `Aristas`: Conexiones entre el índice de un vértice y otro.
+    * `Caras`: Superficies cerradas (en este ejercicio se deja vacío `[]`).
+
+
+
+#### Código Fuente (Blender Python):
+
+```python
+import bpy
+import math
+
+def crear_poligono_2d(nombre, lados, radio):
+    # 1. Limpiar la escena antes de empezar
+    bpy.ops.object.select_all(action='SELECT')
+    bpy.ops.object.delete()
+
+    # 2. Crear una nueva malla y un objeto
+    malla = bpy.data.meshes.new(nombre)
+    objeto = bpy.data.objects.new(nombre, malla)
+    
+    # 3. Vincular el objeto a la escena actual
+    bpy.context.collection.objects.link(objeto)
+    
+    vertices = []
+    aristas = []
+    
+    # 4. Cálculo matemático de vértices (Distribución circular)
+    for i in range(lados):
+        # Dividimos los 360 grados (2*PI) entre el número de lados
+        angulo = 2 * math.pi * i / lados
+        x = radio * math.cos(angulo)
+        y = radio * math.sin(angulo)
+        vertices.append((x, y, 0))
+        
+    # 5. Definición de aristas (Conexión de puntos)
+    for i in range(lados):
+        # Conecta el vértice actual con el siguiente. 
+        # El '%' (módulo) asegura que el último se conecte con el primero.
+        aristas.append((i, (i + 1) % lados))
+        
+    # 6. Cargar los datos a la malla de Blender
+    malla.from_pydata(vertices, aristas, [])
+    malla.update()
+
+# 7. Llamada a la función (Ejemplo: Hexágono de radio 5)
+crear_poligono_2d("Poligono2D", lados=6, radio=5)
+```
+A continuación se muestra el código en ejecución:
+
+<img width="1920" height="1008" alt="Captura de pantalla 2026-02-25 202238" src="https://github.com/user-attachments/assets/6a829640-df36-4f6f-b0d7-207f910ce733" />
 
 ---
 
@@ -72,6 +177,7 @@ El procesamiento implica la manipulación directa de la matriz de píxeles:
 * **Histograma de imagen:** Representación gráfica de la distribución de intensidades de color en una imagen.
 
 ---
+
 ---
 
 ## 📚 Bibliografías y Fuentes de Consulta 
