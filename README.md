@@ -86,6 +86,8 @@ Modelos de color RGB, CMY, HSV y HSL. (s. f.). https://graficaciontmmjc.blogspo
 
 Valdes, A. S. (2013b, septiembre 22). 2.2  Representación y trazo de poligonos. https://graficacionito.blogspot.com/2013/09/22-representacion-y-trazo-de-poligonos.html
 
+Client challenge. (s. f.). https://es.slideshare.net/slideshow/1-6-procesamiento-de-mapas-de-bits-en-graficacion/282295902
+
 ---
 
 ---
