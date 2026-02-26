@@ -74,24 +74,29 @@ El procesamiento implica la manipulación directa de la matriz de píxeles:
 ---
 ---
 
-## 📚 Bibliografía y Fuentes de Consulta
+## 📚 Bibliografía y Fuentes de Consulta (Recursos Digitales)
 
-Las siguientes referencias fueron consultadas para la elaboración de estos apuntes:
+Para la elaboración de estos apuntes se consultaron las siguientes fuentes disponibles en plataformas digitales, siguiendo el formato **APA (7ma Edición)**:
 
-* **Hearn, D., & Baker, M. P. (2006).** *Gráficos por computadora con OpenGL* (3ra ed.). Pearson Educación. 
-  *(Referencia pilar para los algoritmos de Bresenham, DDA y aspectos matemáticos de transformaciones).*
+* **Blender Foundation. (2024).** *Blender 4.0 Reference Manual*. Recuperado de [https://docs.blender.org/manual/es/latest/](https://docs.blender.org/manual/es/latest/)
+  *(Guía oficial digital para los apartados de iluminación y modelado 3D).*
 
-* **Hughes, J. F., Van Dam, A., Foley, J. D., & Feiner, S. K. (2014).** *Computer Graphics: Principles and Practice* (3rd ed.). Addison-Wesley Professional.
-  *(Fuente técnica sobre la historia de la graficación y modelos de color).*
+* **Cisneros, M. P. (2018).** *Graficación por computadora*. [Archivo PDF]. Recuperado de [https://www.academia.edu/37525301/Graficacion_por_computadora](https://www.academia.edu/37525301/Graficacion_por_computadora)
+  *(Libro digital académico que cubre la historia y algoritmos de trazo).*
 
-* **Blender Foundation. (2024).** *Blender 4.0 Reference Manual*. Recuperado de [https://docs.blender.org/manual/en/latest/](https://docs.blender.org/manual/en/latest/)
-  *(Documentación oficial utilizada para el tutorial de iluminación y materiales).*
+* **Khronos Group. (2023).** *OpenGL de Referencia Rápida*. Recuperado de [https://www.khronos.org/opengl/](https://www.khronos.org/opengl/)
+  *(Documentación técnica digital sobre el procesamiento de gráficos y rasterización).*
 
-* **Shreiner, D., Sellers, G., Kessenich, J., & Licea-Kane, B. (2013).** *OpenGL Programming Guide: The Official Guide to Learning OpenGL* (8th ed.). Addison-Wesley.
-  *(Referencia sobre el procesamiento de mapas de bits y rasterización).*
+* **Pascual, R. (2021).** *Modelos de Color y Espacios de Color*. [Artículo web]. Recuperado de [https://proyectacolor.cl/teoria-del-color/modelos-de-color/](https://proyectacolor.cl/teoria-del-color/modelos-de-color/)
+  *(Recurso digital detallado sobre la comparativa entre RGB, CMYK y HSV).*
 
-* **Wolfram MathWorld. (n.d.).** *Bresenham's Line Algorithm*. Recuperado de [https://mathworld.wolfram.com/](https://mathworld.wolfram.com/BresenhamsLineAlgorithm.html)
-  *(Consulta de los fundamentos matemáticos detrás del trazo de líneas).*
+* **University of Cambridge. (s.f.).** *Computer Graphics: Algorithms and Mathematics*. [Material de curso digital]. Recuperado de [https://www.cl.cam.ac.uk/teaching/current/CompGraph/](https://www.cl.cam.ac.uk/teaching/current/CompGraph/)
+  *(Apuntes digitales de alto nivel sobre los aspectos matemáticos de la graficación).*
+
+* **Wolfram MathWorld. (2024).** *Bresenham's Line Algorithm*. Recuperado de [https://mathworld.wolfram.com/BresenhamsLineAlgorithm.html](https://mathworld.wolfram.com/BresenhamsLineAlgorithm.html)
+  *(Enciclopedia matemática digital para la validación de algoritmos de trazo).*
+
+---
 
 ---
   
