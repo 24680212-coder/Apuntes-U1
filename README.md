@@ -74,8 +74,17 @@ El procesamiento implica la manipulación directa de la matriz de píxeles:
 ---
 ---
 
-## 📚 Bibliografía y Fuentes de Consulta (Recursos Digitales)
+## 📚 Bibliografías y Fuentes de Consulta 
 
+Antecedentes y evolución de la graficación por computadora. (s. f.). https://grafidepc.blogspot.com/p/blog-page.html
+
+Área de aplicación de la graficación por computadora. (s. f.). https://grafidepc.blogspot.com/p/area-de-aplicacion-de-la-graficacion.html
+
+Valdes, A. S. (2013, 14 septiembre). 1.4 Aspectos matemáticos de la Graficación (Geometría fractal). https://graficacionito.blogspot.com/2013/09/14-aspectos-matematicos-de-la.html
+
+Modelos de color RGB, CMY, HSV y HSL. (s. f.). https://graficaciontmmjc.blogspot.com/2019/03/modelos-de-color-rgb-cmy-hsv-y-hsl.html
+
+Valdes, A. S. (2013b, septiembre 22). 2.2  Representación y trazo de poligonos. https://graficacionito.blogspot.com/2013/09/22-representacion-y-trazo-de-poligonos.html
 
 ---
 
